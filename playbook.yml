@@ -7,6 +7,7 @@
         name:
           - fish
           - tig
+          - htop
 
 - hosts: all
   user: root
