@@ -1,0 +1,15 @@
+---
+- hosts: all
+  user: root
+  tasks:
+    - name: Install packages
+      apt:
+        name:
+          - fish
+          - fcitx5-mozc
+          - fonts-noto-cjk
+          - fonts-noto-cjk-extra
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
