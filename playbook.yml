@@ -6,14 +6,35 @@
       apt:
         name:
           - fish
+          - tig
+
+- hosts: all
+  user: root
+  tasks:
+    - name: Install ime packages
+      apt:
+        name:
           - fcitx5-mozc
           - fonts-noto-cjk
           - fonts-noto-cjk-extra
+
+- hosts: all
+  user: root
+  tasks:
+    - name: Install docker dependent packages
+      apt:
+        name:
           - ca-certificates
           - curl
           - gnupg
           - lsb-release
-          - tig
+
+- hosts: all
+  user: root
+  tasks:
+    - name: Install ruby dependent packages
+      apt:
+        name:
           - autoconf
           - bison
           - patch
